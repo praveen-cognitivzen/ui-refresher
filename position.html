@@ -1,0 +1,82 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position task</title>
+    <style>
+        .mainContainer {
+            position: relative;
+            border: 2px solid red;
+            height: 100px;
+            width: 400px;
+            padding: 10px;
+            background-color: pink;
+        }
+
+        .subContainer {
+            position: relative;
+            border: 5px solid yellow;
+            height: 60px;
+            width: 300px;
+            margin-left: 40px;
+            padding: 10px;
+            background-color: gray;
+
+        }
+
+        .Container {
+            position: fixed;
+            border: 5px solid rgb(102, 0, 255);
+            height: 20px;
+            width: 280px;
+            text-align: center;
+            background-color: violet;
+
+        }
+
+        .innerContainer {
+            position: fixed;
+            border: 5px solid rgb(102, 0, 255);
+            height: 20px;
+            width: 280px;
+            text-align: center;
+            background-color: rgb(130, 197, 238);
+            margin-top: 30px;
+
+        }
+
+        .mainSubContainer {
+            position: fixed;
+            border: 10px solid forestgreen;
+            margin: 70px 5px 10px 350px;
+        }
+
+        /* .image {
+            background-image: url("../ui-refresher/images/mobile.png");
+            background-repeat: repeat-y;
+            width: 100px;
+
+        } */
+    </style>
+
+<body>
+    <div class="mainContainer">
+        <div class="subContainer">
+            <div class="Container">
+                <div class="innerContainer">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+    <div class="mainContainer image">
+        <div class="mainSubContainer">
+
+        </div>
+    </div>
+</body>
+</head>
