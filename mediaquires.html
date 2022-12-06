@@ -1,0 +1,74 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media QUires example</title>
+    <style>
+        .mainContainer {
+            display: flex;
+            justify-content: center;
+        }
+
+        .mainContainer div {
+            height: 400px;
+            width: 400px;
+            margin: 5px;
+            background-color: rebeccapurple;
+        }
+
+        @media only screen and (min-width: 1600px) {
+            .mainContainer {
+                background-color: lightblue;
+                flex-wrap: wrap;
+            }
+        }
+
+        @media only screen and (min-width: 1024px) and (max-width: 1400px) {
+            .mainContainer {
+                background-color: rgb(243, 17, 24);
+                flex-wrap: wrap;
+            }
+        }
+
+        @media only screen and (min-width: 600px) and (max-width: 1024px) {
+            .mainContainer {
+                background-color: rgb(230, 173, 178);
+                flex-wrap: wrap;
+
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            .mainContainer {
+                background-color: rgb(212, 230, 173);
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mainContainer">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+
+</body>
+
+<!-- 1600=@@@@
+1400-1600===
+@@@@
+1024-1400===
+@@
+@@
+600 bow====
+@
+@
+@
+@ -->
+
+</html>

@@ -1,0 +1,60 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator Task</title>
+    <style>
+        .calContainer {
+            border: 2px solid red;
+            text-align: center;
+            margin: 10px 500px;
+            padding: 10px;
+            background-color: aqua;
+        }
+
+        .calContainer button {
+            height: 40px;
+            width: 60px;
+            margin: 5px;
+            font-size: 20px;
+        }
+
+        #searchfield {
+            width: 280px;
+            height: 40px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <form class="calContainer" name="calculation">
+        <h1>Calculator</h1>
+        <input type="text" name='result' id='searchfield' /><br />
+        <button type="button" onclick="calculation.result.value +='1'">1</button>
+        <button type="button" onclick="calculation.result.value +='2'">2</button>
+        <button type="button" onclick="calculation.result.value +='3'">3</button>
+        <button type="button" onclick="calculation.result.value +='/'">/</button><br />
+
+        <button type="button" onclick="calculation.result.value +='4'">4</button>
+        <button type="button" onclick="calculation.result.value +='5'">5</button>
+        <button type="button" onclick="calculation.result.value +='6'">6</button>
+        <button type="button" onclick="calculation.result.value +='*'">*</button><br />
+
+
+        <button type="button" onclick="calculation.result.value +='7'">7</button>
+        <button type="button" onclick="calculation.result.value +='8'">8</button>
+        <button type="button" onclick="calculation.result.value +='9'">9</button>
+        <button type="button" onclick="calculation.result.value +='-'">-</button><br />
+
+        <button type="button" onclick="calculation.result.value =' '">clear</button>
+        <button type="button" onclick="calculation.result.value +='0'">0</button>
+        <button type="button" onclick="calculation.result.value +='+'">+</button>
+        <button type="button" onclick="calculation.result.value=eval(calculation.result.value)">=</button><br />
+
+    </form>
+</body>
+
+</html>
