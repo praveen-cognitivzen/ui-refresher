@@ -12,6 +12,7 @@
             margin: 10px 500px;
             padding: 10px;
             background-color: aqua;
+
         }
 
         .calContainer button {
@@ -21,18 +22,51 @@
             font-size: 20px;
         }
 
+        .calContainer input {
+            text-align: right;
+
+        }
+
         #searchfield {
             width: 280px;
             height: 40px;
             font-size: 20px;
         }
+
+        .scroll {
+            overflow: scroll;
+            background-color: red;
+        }
     </style>
+    <script>
+
+        let presentChar, prevChar
+        const name = ['+', '-', '*', '.'];
+
+        const inputChange = (event) => {
+            presentChar = event.target.value.charAt(event.target.value.length - 1)
+            console.log("present and prevchar", presentChar, " ", prevChar)
+            if (name.includes(presentChar)) {
+                if (name.includes(prevChar)) {
+                    alert("Invalid input")
+                }
+            }
+            prevChar = presentChar
+            console.log('invalid password and enter the different paramentrs')
+            console.log("Present input length", event.target.value.length);
+            if (event.target.value.length > 5) {
+                document.getElementById("searchfield").classList.add("scroll")
+            } else {
+                document.getElementById("searchfield").classList.remove("scroll")
+            }
+        }
+    </script>
 </head>
 
 <body>
     <form class="calContainer" name="calculation">
         <h1>Calculator</h1>
-        <input type="text" name='result' id='searchfield' /><br />
+        <input type="text" name='result' id='searchfield' style="height: 70px;" onkeyup="inputChange(event)" /><br />
         <button type="button" onclick="calculation.result.value +='1'">1</button>
         <button type="button" onclick="calculation.result.value +='2'">2</button>
         <button type="button" onclick="calculation.result.value +='3'">3</button>
@@ -47,7 +81,7 @@
         <button type="button" onclick="calculation.result.value +='7'">7</button>
         <button type="button" onclick="calculation.result.value +='8'">8</button>
         <button type="button" onclick="calculation.result.value +='9'">9</button>
-        <button type="button" onclick="calculation.result.value +='-'">-</button><br />
+        <button type="button" onclick="calculation.result.value +='.'">.</button><br />
 
         <button type="button" onclick="calculation.result.value =' '">clear</button>
         <button type="button" onclick="calculation.result.value +='0'">0</button>
@@ -55,6 +89,9 @@
         <button type="button" onclick="calculation.result.value=eval(calculation.result.value)">=</button><br />
 
     </form>
+    <p id="demo"></p>
+
+
 </body>
 
 </html>
